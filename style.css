@@ -86,25 +86,27 @@ nav a:hover {
     background-color: var(--secondary-color);
 }
 
-/* --- Hero Section (CAPA ATUALIZADA) --- */
+/* --- Hero Section (CAPA AJUSTADA) --- */
 .hero {
     /* Fundo com a imagem do banner-pets.png */
-    /* Deixei o filtro azul mais fraquinho (0.4) para a foto aparecer bem */
     background: linear-gradient(rgba(230, 242, 255, 0.4), rgba(230, 242, 255, 0.4)), url('banner-pets.png');
     background-size: cover;
-    background-position: center;
+    
+    /* --- POSIÇÃO CORRIGIDA PARA MOSTRAR O GATO --- */
+    background-position: center 30%;
+    
     background-repeat: no-repeat;
-    min-height: 100vh; /* Altura total da tela para caber tudo */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #003366; /* MUDANÇA: Texto agora é AZUL ESCURO para contraste */
+    color: #003366; /* Texto AZUL ESCURO para contraste */
     padding: 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Tamanho ajustado para a nova frase caber bem */
     margin-bottom: 20px;
     /* Contorno branco forte para destacar o título da foto */
     text-shadow: 2px 2px 0px #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
