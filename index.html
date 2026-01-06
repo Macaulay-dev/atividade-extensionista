@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampinha Amiga - Apoio à ONG Tampinha do Bem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo">♻️ Tampinha Amiga</div>
+            <span class="sub-logo">Apoio à ONG Tampinha do Bem</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#como-participar">Como Participar</a></li>
+                <li><a href="#o-que-doar">O que Doar</a></li>
+                <li><a href="#pontos">Pontos de Coleta</a></li>
+            </ul>
+        </nav>
+        <a href="#pontos" class="btn-cta">Encontre um Ponto</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge-voluntario">Projeto Voluntário</span>
+            <h1>Unidos pela Reciclagem</h1>
+            
+            <p class="intro-text">
+                Esta página é uma iniciativa para divulgar e facilitar o acesso aos pontos de coleta da <strong>ONG Tampinha do Bem</strong>, ajudando a transformar tampinhas em castrações.
+            </p>
+
+            <div class="box-estatistica">
+                <p>
+                    ⚠️ <strong>A Realidade do Abandono:</strong> Não há um número exato de animais abandonados por ano, mas as estimativas mais recentes (fim de 2025/início de 2026) indicam que o Brasil tem cerca de <strong>30 milhões de animais domésticos</strong> (cães e gatos) em situação de abandono vivendo nas ruas.
+                </p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">
+                    Picos de abandono ocorrem no fim do ano devido a viagens e férias. Esses números representam um cenário contínuo, com milhões de novos casos surgindo anualmente, mas a estimativa total se mantém estável em torno dos 30 milhões.
+                </p>
+            </div>
+
+            <a href="#como-participar" class="btn-cta">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="o-que-doar">
+        <h2>O que coletamos?</h2>
+        <div class="materials-container">
+            <div class="material-card">
+                <h3 class="sim-titulo">✅ Sim, nós coletamos:</h3>
+                <ul class="check-list">
+                    <li><strong>Tampas plásticas rígidas</strong> (Garrafas PET, galões, produtos de limpeza).</li>
+                    <li><strong>Lacres de alumínio</strong> (Latas de refrigerante e bebidas).</li>
+                    <li><strong>Tampas de metal</strong> (Ex: garrafas de cerveja/vidro).</li>
+                    <li><strong>Latas de alumínio</strong>.</li>
+                    <li><strong>Frascos de desodorante</strong> de alumínio.</li>
+                </ul>
+            </div>
+            
+            <div class="material-card">
+                <h3 class="nao-titulo">❌ O que NÃO coletamos:</h3>
+                <ul class="cross-list">
+                    <li>Lacres de leite.</li>
+                    <li>Cartelas de remédio.</li>
+                    <li>Pilhas.</li>
+                    <li>Tampas de acrílico.</li>
+                    <li>Tampas de conta gotas (borracha).</li>
+                    <li>Potes de fio dental.</li>
+                    <li>Dosador de produtos (valves/pumps).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-participar" class="bg-white">
+        <h2>Como Participar</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Junte</h3>
+                <p>Separe tampas plásticas e lacres de alumínio em sua casa, escola ou trabalho.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Leve</h3>
+                <p>Encontre o ponto de coleta mais próximo na lista abaixo e entregue suas doações.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Reciclamos</h3>
+                <p>A ONG vende todo o material para indústrias de reciclagem.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Ajudamos</h3>
+                <p>100% dos recursos são destinados à castração de animais abandonados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pontos">
+        <h2>Encontre um Ponto de Coleta</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Digite seu bairro (ex: Centro, Água Verde, Portão) para filtrar.</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Busque por bairro ou nome do local...">
+        </div>
+
+        <div class="points-grid" id="pointsGrid">
+            </div>
+    </section>
+
+    <footer>
+        <h3>Apoio: Tampinha do Bem Curitiba</h3>
+        <p>Iniciativa voluntária para divulgar os pontos de coleta e apoiar a causa animal.</p>
+        <br>
+        <a href="https://www.instagram.com/tampinhadobemcwb/" target="_blank" class="social-link">
+             Visite o Instagram Oficial da ONG
+        </a>
+        <p style="margin-top: 30px; font-size: 0.8rem;">Desenvolvido como projeto de extensão/voluntariado.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

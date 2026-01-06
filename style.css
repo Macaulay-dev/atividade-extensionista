@@ -1,0 +1,347 @@
+:root {
+    /* --- TONS DE AZUL --- */
+    --primary-color: #0056b3; /* Azul Forte */
+    --secondary-color: #003d80; /* Azul Escuro */
+    --accent-color: #4da6ff; /* Azul Claro para detalhes */
+    --text-color: #333;
+    --light-bg: #e6f2ff; /* Fundo azulado bem suave */
+    --white: #ffffff;
+    --danger-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-logo {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: -2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.btn-cta {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Hero Section (CAPA ATUALIZADA) --- */
+.hero {
+    /* Fundo com a imagem do banner-pets.png */
+    /* Deixei o filtro azul mais fraquinho (0.4) para a foto aparecer bem */
+    background: linear-gradient(rgba(230, 242, 255, 0.4), rgba(230, 242, 255, 0.4)), url('banner-pets.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Altura total da tela para caber tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #003366; /* MUDANÇA: Texto agora é AZUL ESCURO para contraste */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    /* Contorno branco forte para destacar o título da foto */
+    text-shadow: 2px 2px 0px #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 700;
+    /* Leve brilho branco atrás do texto para leitura */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.9); 
+}
+
+/* Estilo do novo quadro de estatística */
+.box-estatistica {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco quase sólido */
+    border-left: 5px solid #e74c3c; /* Tarja vermelha de alerta */
+    color: #333; /* Texto preto para leitura fácil */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.badge-voluntario {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- Sections General --- */
+section {
+    padding: 4rem 5%;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+/* --- Materials Info --- */
+.materials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.material-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.material-card h3 {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sim-titulo { color: var(--primary-color); }
+.nao-titulo { color: var(--danger-color); }
+
+.check-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.check-list li::before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.cross-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    color: #777;
+}
+
+.cross-list li::before {
+    content: '✕';
+    color: var(--danger-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* --- Steps --- */
+.bg-white { background-color: white; }
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step-card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    border-top: 5px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* --- Collection Points (Search) --- */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: var(--primary-color);
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.point-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.point-card:hover {
+    transform: translateY(-5px);
+}
+
+.bairro-tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.point-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.point-address {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 10px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.social-link:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    nav { display: none; }
+    .search-container { flex-direction: column; }
+    .box-estatistica { padding: 15px; }
+}
